@@ -12,6 +12,7 @@ using Arriba.Indexing;
 using Arriba.Structures;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ArribaRange = Arriba.Structures.Range;
 
 namespace Arriba.Test.Indexing
 {
@@ -64,7 +65,7 @@ namespace Arriba.Test.Indexing
                     int i;
                     for (i = 0; i < results.Count; ++i)
                     {
-                        Range r = results.Ranges[i];
+                        ArribaRange r = results.Ranges[i];
                         if (r.Length >= 2 && r.Length <= 50)
                         {
                             //ByteBlock word = new ByteBlock();
@@ -114,7 +115,7 @@ namespace Arriba.Test.Indexing
                     int i;
                     for (i = 0; i < results.Count; ++i)
                     {
-                        Range r = results.Ranges[i];
+                        ArribaRange r = results.Ranges[i];
                         if (r.Length >= 2 && r.Length <= 50)
                         {
                             count++;
@@ -155,7 +156,7 @@ namespace Arriba.Test.Indexing
                 int i;
                 for (i = 0; i < results.Count; ++i)
                 {
-                    Range r = results.Ranges[i];
+                    ArribaRange r = results.Ranges[i];
                     if (r.Length >= 2 && r.Length <= 50)
                     {
                         count++;

@@ -75,16 +75,18 @@ namespace Arriba.Communication.Application
 
             contentType = "application/octet-stream"; // Default if registry lookup fails. 
 
-            using (Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(fileExtension))
-            {
-                if (regKey != null && regKey.GetValue("Content Type") != null)
-                {
-                    contentType = regKey.GetValue("Content Type").ToString();
-                    _contentTypeCache.Add(fileExtension, contentType);
-                }
-            }
+            // TODO: CoreBug
+            throw null;
+            //using (Microsoft.Win32.RegistryKey regKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(fileExtension))
+            //{
+            //    if (regKey != null && regKey.GetValue("Content Type") != null)
+            //    {
+            //        contentType = regKey.GetValue("Content Type").ToString();
+            //        _contentTypeCache.Add(fileExtension, contentType);
+            //    }
+            //}
 
-            return contentType;
+            //return contentType;
         }
     }
 }
